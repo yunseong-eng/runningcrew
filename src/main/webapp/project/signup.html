@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/run.js"></script> <!-- JS 파일 로드 -->
+</head>
+<body class="signup-background">
+    <main>
+        <form id="signupForm" class="centered-form">
+            <div id="idDiv" class="error-message"></div>
+            <label for="id" style="font-weight: 700; font-size: 18px; color: black;">ID: </label>
+            <input type="text" id="id" name="id">
+            <br>
+            <div id="passwordDiv" class="error-message"></div>
+            <label for="password" style="font-weight: 700; font-size: 18px; color: black;">Password: </label>
+            <input type="password" id="password" name="password">
+            <br>
+            <div id="nameDiv" class="error-message"></div>
+            <label for="name" style="font-weight: 700; font-size: 18px; color: black;">Name: </label>
+            <input type="text" id="name" name="name">
+            <br>
+            <div id="emailDiv" class="error-message"></div>
+            <label for="email" style="font-weight: 700; font-size: 18px; color: black;">E-mail: </label>
+            <input type="email" id="email" name="email">
+            <br>
+            <button type="submit">회원가입</button>
+        </form>
+        <p><a href="index.html">메인 화면으로 돌아가기</a></p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/run.js"></script> <!-- JS 파일 로드 -->
+</head>
+<body class="login-background">
+    <main>
+        <form id="loginForm" class="centered-form">
+            <div id="idDiv" class="error-message"></div>
+            <label for="id" style="font-weight: 700; font-size: 18px; color: black;">ID: </label>
+            <input type="text" id="id" name="id"> <!-- required 속성 제거 -->
+            <br>
+            <div id="passwordDiv" class="error-message"></div>
+            <label for="password" style="font-weight: 700; font-size: 18px; color: black;">Password: </label>
+            <input type="password" id="password" name="password"> <!-- required 속성 제거 -->
+            <br>
+            <button type="submit">로그인</button>
+        </form>
+        <p><a href="index.html">메인 화면으로 돌아가기</a></p>
+    </main>
+</body>
+</html>

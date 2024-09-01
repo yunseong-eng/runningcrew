@@ -1,0 +1,243 @@
+/* 전체적인 페이지 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+	 font-weight: 777;
+}
+
+/* 로그인 및 회원가입 페이지의 배경 이미지 설정 */
+.login-background, .signup-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-background::before, .signup-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0.05px); /* 배경 이미지 흐리게 */
+    z-index: -1;
+    opacity: 0.3; /* 투명도 조절 */
+}
+
+.login-background::before {
+    background-image: url('../image/login.jpg');
+}
+
+.signup-background::before {
+    background-image: url('../image/signup.jpg');
+}
+
+/* 모집 섹션의 여백 조정 */
+#board-title {
+    margin-bottom: 20px; /* 제목과 본문 사이의 여백 */
+}
+
+#board-description {
+    margin-bottom: 50px; /* 본문과 버튼 사이의 여백 */
+}
+
+/* 폼을 가운데 배치하고 스타일링 */
+.centered-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* 입력 필드 스타일 */
+input, textarea {
+    display: block;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999;
+}
+
+/* 오류 메시지 스타일 */
+.error-message {
+    color: red; 
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #345159;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 70%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FF895A;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 40px; /* 패딩을 늘려서 간격 추가 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-weight: 70;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 777;
+}
+
+.user-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px; /* 간격 추가 */
+    border-radius: 3px;
+}
+
+.user-nav a:hover {
+    background-color: #555; /* 호버 시 배경색 변경 */
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+/* 메인 영역 스타일 */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-video {
+    max-width: 100%; /* 비디오의 최대 너비를 80%로 줄입니다 */
+    height: auto; /* 비율을 유지하며 크기 조정 */
+    margin-bottom: 20px; /* 비디오와 텍스트 사이의 간격 */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin-bottom: 3rem; /* 카드 섹션과 하단 요소 사이의 공백 증가 */
+}
+
+.card {
+    margin: 0 auto;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 카드 이미지에 그림자 효과 추가 */
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 카드에 호버 시 약간 위로 올라가는 효과 */
+}
+
+.card-img-top {
+    height: 100%; /* 이미지가 카드의 전체 높이를 차지하게 설정 */
+    object-fit: cover; /* 이미지를 잘라내서 빈 부분 없이 꽉 채움 */
+    width: 100%; /* 카드의 전체 너비를 차지하도록 설정 */
+    margin: 0; /* 여백을 없애기 위해 마진을 0으로 설정 */
+    padding: 0; /* 여백을 없애기 위해 패딩을 0으로 설정 */
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.card-link {
+    font-size: 1.1rem; /* 링크 텍스트 크기 증가 */
+}
+
+.card-title, .card-subtitle {
+    font-weight: bold; /* 제목과 부제목에 대한 굵기 증가 */
+}
+
+.card img {
+    max-height: 100%; /* 이미지를 카드에 맞게 설정 */
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 로그인 및 회원가입 라벨 텍스트 스타일 */
+label {
+    font-weight: 700; /* 텍스트를 두껍게 */
+    font-size: 18px; /* 텍스트 크기 증가 */
+    color: #333; /* 텍스트 색상 */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* 추가 CSS */
+.card.ms-auto {
+    margin-left: auto; /* 카드가 오른쪽으로 정렬되도록 설정 */
+    margin-right: 0; /* 오른쪽 여백을 제거 */
+    max-width: 36rem; /* 카드의 최대 너비를 설정 */
+}
+
+.card-body {
+    padding: 1.5rem; /* 카드 내부 여백을 조금 더 넉넉하게 설정 */
+}
+
+.card img {
+    max-height: 100%; /* 이미지를 카드에 맞게 설정 */
+    object-fit: cover; /* 이미지 비율 유지 */
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Running Crew</title>
+<!-- 외부 폰트와 스타일시트, 그리고 부트스트랩을 통해 CSS 프레임워크를 불러옵니다. -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+.btn-custom {
+   background-color: #333;
+   color: white;
+   border: none;
+   padding: 0.5rem 1rem;
+   border-radius: 5px;
+   text-decoration: none;
+   text-align: center;
+   display: inline-block;
+   cursor: pointer;
+   margin-bottom: 20px;
+   transition: transform 0.3s, box-shadow 0.3s;
+   margin-bottom: 50px; /* 버튼의 하단 여백 */
+}
+
+.btn-custom:hover {
+   background-color: #555; /* 호버 시 색상 변경 */
+   transform: scale(1.1); /* 호버 시 버튼이 10% 커지도록 설정 */
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 효과 추가로 튀어나와 보이게 함 */
+}
+
+/* 카드와 링크 카드 사이의 간격을 넓게 조정 */
+.card-section {
+   margin-bottom: 100px; /* 기존 간격에서 더 넓게 설정 */
+}
+
+/* hr 태그에 마진 추가 */
+hr {
+   margin-top: 50px;
+   margin-bottom: 100px;
+   border: none;
+   border-top: 2px solid #ddd;
+}
+</style>
+</head>
+<body>
+  <header>
+      <h1>Running Crew</h1>
+      <nav class="user-nav">
+          <a href="../project/login.html">로그인</a>
+          <a href="../jsp/logout.jsp">로그아웃</a>
+          <a href="../project/signup.html">회원가입</a>
+      </nav>
+  </header>
+  <main class="container">
+      <!-- 동영상과 모집 섹션을 나란히 배치, 동영상 크기 확대 -->
+      <div class="row align-items-center mb-5">
+          <div class="col-md-8">
+              <video class="hero-video w-100" autoplay muted loop>
+                  <source src="../video/run.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="col-md-4">
+              <h3 id="board-title">런닝크루 모집!!</h3>
+              <p id="board-description">런닝크루와 함께 할 크루원을 모집합니다.</p> 
+              <p>아래 글 작성하기 버튼을 눌러 가입해주세요.</p>
+              <!-- 글 작성하기 버튼 -->
+              <a href="../jsp/write.jsp" class="btn btn-custom">글 작성하기</a>
+          </div>
+      </div>
+      
+      <!-- 카드 섹션 -->
+      <section class="content d-flex flex-wrap justify-content-center mb-5 card-section">
+          <div class="card mx-2">
+              <img src="../image/cadence.jpg" class="card-img-top" alt="Cadence">
+              <div class="card-body">
+                  <p class="card-text">케이던스(Cadence)란? 케이던스는 달리기를 할때 관절이나 무릎의 건강을 위해 신경써야 하는 부분입니다. 꼭 늘리세요!</p>
+              </div>
+          </div>
+
+          <div class="card mx-2" style="width: 18rem;">
+              <img src="../image/speed.jpg" class="card-img-top" alt="Speed">
+              <div class="card-body">
+                  <p class="card-text">빨리 달리는 것이 정답일까? 달리기를 빨리 한다고해서 좋은것도 나쁜것도 아닙니다. 각각의 장점들이 숨어있으니 알아가며 달리기를 즐겨보자!</p>
+              </div>
+          </div>
+
+          <div class="card mx-2">
+              <img src="../image/my.jpg" class="card-img-top" alt="My">
+              <div class="card-body">
+                  <p class="card-text">런닝기록을 저장 하면서 달려봐요! 런닝을 기록해두면 런닝을 더 하고싶어져요. 실제 저의 기록입니다.</p>
+              </div>
+          </div>
+
+          <div class="card mx-2">
+              <img src="../image/treadmill.jpg" class="card-img-top" alt="Treadmill">
+              <div class="card-body">
+                  <p class="card-text">런닝머신 보다 야외런닝을 추천하는 이유.. 가끔은 밖의 공기를 마시며 런닝을 뛰면 좋아요! 지루하지도 않아요.</p>
+              </div>
+          </div>
+      </section>
+      <hr>
+      <!-- 새로운 카드 추가 -->
+      <div class="card ms-auto mt-4" style="width: 36rem;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../image/link.png" class="img-fluid rounded-start" alt="Running Shoes">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">런닝화 보러가기</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">인기 브랜드 런닝화</h6>
+              <p class="card-text">아래 링크를 통해 바로 런닝화를 구경하러 가보자.</p>
+              <a href="https://www.nike.com/kr/w/running-shoes-37v7jzy7ok" class="card-link">Nike</a>
+              <a href="https://www.adidas.co.kr/running?cm_mmc=AdieSEM_google-_-ALWAYSON-_-P_F_U_Running-_-P_F_U_Running__%EC%95%84%EB%94%94%EB%8B%A4%EC%8A%A4%EB%9F%AC%EB%8B%9D%EC%9A%B4%EB%8F%99%ED%99%94-_-dv:eCom-_-cn:ALWAYSON-_-pc:google&cm_mmc1=KR&cm_mmc2=PPC-SB-CrossCategory-None-BMM-KR-APAC-eCom-Paid_Search&gad_source=1&gclid=EAIaIQobChMI-YvQxcGhiAMVUtoWBR3uWQ54EAAYASAAEgJO2_D_BwE" class="card-link">adidas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer class="text-left">
+      <hr>
+      <p>&copy; 2024 Running Crew</p>
+  </footer>
+</body>
+</html>

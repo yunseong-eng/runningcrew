@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>게시판</h1>
+    </header>
+    <main>
+        <!-- 게시글 작성 폼 -->
+        <form id="writeForm" action="../jsp/write.jsp" method="post">
+            <label for="subject">제목:</label>
+            <input type="text" id="subject" name="subject" required>
+            <br>
+            <label for="content">내용:</label>
+            <textarea id="content" name="content" required></textarea>
+            <br>
+            <button type="submit">작성</button>
+        </form>
+        <br>
+        <h2>게시글 목록</h2>
+        <!-- 게시글 목록 -->
+        <div id="boardList">
+            <jsp:include page="board.jsp" />
+        </div>
+    </main>
+</body>
+</html>
